@@ -16,3 +16,13 @@ jobs:
 
     - name: initialization terraform
       run: terraform init
+
+    - name: configuring aws credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ AWS_SECRET_KEY_ID }}
+        aws-region: us-east-1
+
+    - name: planning the terraform module
+      run: terraform plan
