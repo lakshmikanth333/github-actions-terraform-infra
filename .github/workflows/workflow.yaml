@@ -11,5 +11,8 @@ jobs:
     - name: check-out repo code
       uses: actions/checkout@v4
 
-    - name: list
-      run: ls -l
+    - name: set up terraform on runner
+      uses: hashicorp/setup-terraform@v3
+
+    - name: initialization terraform
+      run: terraform init
