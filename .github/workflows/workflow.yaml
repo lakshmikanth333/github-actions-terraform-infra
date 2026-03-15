@@ -26,3 +26,4 @@ jobs:
 
     - name: planning the terraform module
       run: terraform plan
+      
