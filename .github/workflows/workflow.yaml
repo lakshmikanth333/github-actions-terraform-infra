@@ -1,0 +1,12 @@
+name: aws resource creation
+on: 
+  push:
+    branches:
+    - main
+
+jobs:
+  checkout:
+  runs-on: ubuntu-latest
+  steps:
+  - name: check-out repo code
+    uses: actions/checkout@v4
